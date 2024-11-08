@@ -1,0 +1,5 @@
+setup.py
+house_price.egg-info/PKG-INFO
+house_price.egg-info/SOURCES.txt
+house_price.egg-info/dependency_links.txt
+house_price.egg-info/top_level.txt
