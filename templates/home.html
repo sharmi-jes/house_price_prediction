@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Rent Prediction</title>
+    <style>
+        /* Your CSS styles */
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Property Details Form</h2>
+        <form action="/" method="POST">
+            <!-- BHK -->
+            <div class="form-group">
+                <label for="bhk">BHK</label>
+                <input type="text" id="bhk" name="bhk" placeholder="Enter number of BHK" required>
+            </div>
+
+            <!-- Size -->
+            <div class="form-group">
+                <label for="size">Size (sq ft)</label>
+                <input type="number" id="size" name="size" placeholder="Enter size" required>
+            </div>
+
+            <!-- Area Type -->
+            <div class="form-group">
+                <label for="areaType">Area_Type</label>
+                <select id="areaType" name="areaType" required>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                </select>
+            </div>
+
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter city" required>
+            </div>
+
+            <!-- Furnishing Status -->
+            <div class="form-group">
+                <label for="furnishingStatus">Furnishing_Status</label>
+                <select id="furnishingStatus" name="furnishingStatus" required>
+                    <option value="Furnished">Furnished</option>
+                    <option value="Semi-Furnished">Semi-Furnished</option>
+                    <option value="Unfurnished">Unfurnished</option>
+                </select>
+            </div>
+
+            <!-- Tenant Preferred -->
+            <div class="form-group">
+                <label for="tenantPreferred">Tenant_Preferred</label>
+                <select id="tenantPreferred" name="tenantPreferred" required>
+                    <option value="Family">Family</option>
+                    <option value="Bachelors">Bachelors</option>
+                    <option value="Both">Both</option>
+                </select>
+            </div>
+
+            <!-- Number of Bathrooms -->
+            <div class="form-group">
+                <label for="bathroom">Bathrooms</label>
+                <input type="number" id="bathroom" name="bathroom" placeholder="Enter number of bathrooms" required>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    {% if results %}
+        <h3>Predicted Rent: {{ results }}</h3>
+    {% endif %}
+</body>
+</html>
